@@ -1,0 +1,31 @@
+# 目录
+
+* [Linux 性能相关常用命令](./LinuxCommand/Linux%20性能相关常用命令.md)
+* [记录平时常用的 Linux 命令](./Linux常用命令.md)
+     * [wget](./Linux常用命令.md#wget---world-wide-web-get-top)
+* [平时 linux 遇到的问题解决和小知识](./Linux小知识.md)
+     * [使用 wget 提示无法建立SSL连接](Linux小知识.md#使用-wget-提示无法建立ssl连接-top)
+     * [通过编译安装软件时找不到.so文件](Linux小知识.md#通过编译安装软件时error运行时找不到so文件-top)
+     * [更换 Ubuntu 18.04 LTS 登录界面背景](Linux小知识.md#更换-ubuntu-1804-lts-登录界面背景-top)
+     * [执行 make 命令时提示“makefile:2: *** 遗漏分隔符 停止”](Linux小知识.md#执行-make-命令时提示-makefile2--遗漏分隔符-停止-top)
+     * [Linux 下 gcc 编译 c 源文件过程详解](Linux小知识.md#linux-下-gcc-编译-c-源文件过程详解-top)
+     * [创建启动器（.Desktop文件)](Linux小知识.md#创建启动器desktop文件-top)
+     * [浅谈 /etc/skel 文件夹](Linux小知识.md#浅谈-etcskel-文件夹-top)
+     * [apt、wget、curl 设置代理端口](Linux小知识.md#aptwgetcurl-设置代理端口-top)
+     * [shell、终端、终端模拟器](Linux小知识.md#shell终端终端模拟器-top)
+     * [Ubuntu 彻底关闭 dash](Linux小知识.md#ubuntu-彻底关闭-dash-top)
+     * [sudo apt update显示：鉴于仓库 'xxx' 不支持 'i386' 体系结构，跳过配置文件 'xx' 的获取](Linux小知识.md#sudo-apt-update-提示异常信息-top)
+     * [Linux 中使用 crontab 命令启用自定义定时任务](Linux小知识.md#linux-中使用-crontab-命令启用自定义定时任务-top)
+     * [`#!/usr/bin/env` 与 `#!/usr/bin`区别](Linux小知识.md#usrbinenv-与-usrbin区别-top)
+* [Ubuntu 软件包安装方法](./UbuntuSoftwareInstall.md)
+* [Linux C/C++ 软件包编译、安装步骤详解](./compiler.md)
+* [从 Bash Shell 启动“窥探” Linux 环境变量相关文件](./从BashShell启动“窥探”Linux环境变量相关文件.md)
+* [APT 剖析详解](./APT-剖析详解.md)
+* [ffmpeg 详解](./ffmpeg详解.md)
+* [trans 常用命令详解](./trans命令.md)
+* [Linux 开机启动项详解](./Linux开机启动项详解.md)
+* [正则表达式学习](./正则表达式学习.md)
+* [Linux 防火墙学习](./防火墙学习.md)
+
+
+
