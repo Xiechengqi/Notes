@@ -746,48 +746,47 @@
 <div align="center">
   <img src="images/08.jpg"><br>&#x4F7F;&#x7528;&#x5BC6;&#x94A5;&#x76F4;&#x63A5;&#x767B;&#x5F55;&#x65E0;&#x9700;&#x5BC6;&#x7801;
 </div>
-<br>
 
-2.  `xxx.pem` &#x53EF;&#x4EE5;&#x5728; aws lightsail &#x670D;&#x52A1;&#x5668;&#x63A7;&#x5236;&#x53F0;&#x4E0B;&#x8F7D; **( Lightsail &#x5728;&#x60A8;&#x521B;&#x5EFA;&#x5B9E;&#x4F8B;&#x7684;&#x6BCF;&#x4E2A; AWS &#x533A;&#x57DF;&#x4E2D;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x9ED8;&#x8BA4;&#x5BC6;&#x94A5;&#x5BF9; )** 
 
+<ol>
+<li><code>xxx.pem</code> &#x53EF;&#x4EE5;&#x5728; aws lightsail &#x670D;&#x52A1;&#x5668;&#x63A7;&#x5236;&#x53F0;&#x4E0B;&#x8F7D; <strong>( Lightsail &#x5728;&#x60A8;&#x521B;&#x5EFA;&#x5B9E;&#x4F8B;&#x7684;&#x6BCF;&#x4E2A; AWS &#x533A;&#x57DF;&#x4E2D;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x9ED8;&#x8BA4;&#x5BC6;&#x94A5;&#x5BF9; )</strong> </li>
+</ol>
 <div align="center">
   <img src="images/07.jpg"><br>&#x6BCF;&#x4E2A;&#x5730;&#x533A;&#x90FD;&#x6709;&#x81EA;&#x5DF1;&#x7684;&#x9ED8;&#x8BA4;&#x5BC6;&#x94A5;
 </div>
-<br>
 
-3.  &#x9996;&#x6B21;&#x767B;&#x5F55;&#x7528;&#x6237;&#x9700;&#x8981;&#x5728;&#x5B9E;&#x4F8B;&#x7684; &quot;&#x7BA1;&#x7406;&quot; &#x4E2D;&#x7684; &quot;&#x8FDE;&#x63A5;&quot; &#x9875;&#x9762;&#x67E5;&#x770B;
-
+<ol>
+<li>&#x9996;&#x6B21;&#x767B;&#x5F55;&#x7528;&#x6237;&#x9700;&#x8981;&#x5728;&#x5B9E;&#x4F8B;&#x7684; &quot;&#x7BA1;&#x7406;&quot; &#x4E2D;&#x7684; &quot;&#x8FDE;&#x63A5;&quot; &#x9875;&#x9762;&#x67E5;&#x770B;</li>
+</ol>
 <div align="center">
   <img src="images/09.jpg"><br>
 </div>
-<br>
 
-4.  &#x767B;&#x5F55;&#x540E;&#x5207;&#x6362;&#x6210; root &#x7528;&#x6237;, &#x8BBE;&#x7F6E; root &#x5BC6;&#x7801;
-
-```
-sudo su
+<ol>
+<li>&#x767B;&#x5F55;&#x540E;&#x5207;&#x6362;&#x6210; root &#x7528;&#x6237;, &#x8BBE;&#x7F6E; root &#x5BC6;&#x7801;</li>
+</ol>
+<pre><code>sudo su
 passwd root
-```
-
-5.  &#x4FEE;&#x6539; `/etc/ssh/sshd_config` &#x6587;&#x4EF6;
-
-``` 
-# &#x88AB;&#x6CE8;&#x91CA;&#x53BB;&#x6389;&#x6CE8;&#x91CA;, &#x662F; no &#x7684;&#x6539;&#x4E3A; yes
+</code></pre><ol>
+<li>&#x4FEE;&#x6539; <code>/etc/ssh/sshd_config</code> &#x6587;&#x4EF6;</li>
+</ol>
+<pre><code># &#x88AB;&#x6CE8;&#x91CA;&#x53BB;&#x6389;&#x6CE8;&#x91CA;, &#x662F; no &#x7684;&#x6539;&#x4E3A; yes
 PermitRootLogin yes
 PasswordAuthentication yes
-```
-
-6.  &#x6700;&#x540E;&#x4FEE;&#x6539; `/root/.ssh/authorized_keys`  , &#x5220;&#x9664; `/root/.ssh/authorized_keys` &#x4E2D; `ssh-rsa` &#x524D;&#x9762;&#x5185;&#x5BB9; ( &#x6CA1;&#x6709;&#x5219;&#x4E0D;&#x4FEE;&#x6539; )
-
-7.  &#x91CD;&#x542F; ssh: `sudo service sshd restart`
-
-8.  &#x518D;&#x6B21;&#x767B;&#x5F55;&#x65F6;&#x5373;&#x53EF;&#x4F7F;&#x7528; `ssh root@host_ip`,&#x4E4B;&#x540E;&#x8F93;&#x5165;&#x5BC6;&#x7801;&#x5373;&#x53EF;&#x767B;&#x5165;
-
-&gt; * &#x82E5;&#x60F3;&#x4F7F;&#x7528;&#x666E;&#x901A;&#x7528;&#x6237;&#x767B;&#x5F55;, &#x9700;&#x8981;&#x5207;&#x6362;&#x5230; root &#x4E0B;&#x4FEE;&#x6539;&#x666E;&#x901A;&#x7528;&#x6237;&#x767B;&#x5F55;&#x5BC6;&#x7801;, &#x5E76;&#x4E14;&#x9700;&#x8981;&#x5982;&#x4E0A;&#x9762;&#x4E00;&#x6837;&#x4FEE;&#x6539; `/home/&#x7528;&#x6237;&#x540D;/.ssh/authorized_keys`,&#x91CD;&#x542F; ssh &#x540E;&#x9000;&#x51FA;&#x518D;&#x6B21;&#x767B;&#x5F55;&#x5373;&#x53EF;&#x4F7F;&#x7528;&#x666E;&#x901A;&#x7528;&#x6237;
-
-
-### &#x5B9E;&#x64CD;&#x622A;&#x5C4F;
-
+</code></pre><ol>
+<li><p>&#x6700;&#x540E;&#x4FEE;&#x6539; <code>/root/.ssh/authorized_keys</code>  , &#x5220;&#x9664; <code>/root/.ssh/authorized_keys</code> &#x4E2D; <code>ssh-rsa</code> &#x524D;&#x9762;&#x5185;&#x5BB9; ( &#x6CA1;&#x6709;&#x5219;&#x4E0D;&#x4FEE;&#x6539; )</p>
+</li>
+<li><p>&#x91CD;&#x542F; ssh: <code>sudo service sshd restart</code></p>
+</li>
+<li><p>&#x518D;&#x6B21;&#x767B;&#x5F55;&#x65F6;&#x5373;&#x53EF;&#x4F7F;&#x7528; <code>ssh root@host_ip</code>,&#x4E4B;&#x540E;&#x8F93;&#x5165;&#x5BC6;&#x7801;&#x5373;&#x53EF;&#x767B;&#x5165;</p>
+</li>
+</ol>
+<blockquote>
+<ul>
+<li>&#x82E5;&#x60F3;&#x4F7F;&#x7528;&#x666E;&#x901A;&#x7528;&#x6237;&#x767B;&#x5F55;, &#x9700;&#x8981;&#x5207;&#x6362;&#x5230; root &#x4E0B;&#x4FEE;&#x6539;&#x666E;&#x901A;&#x7528;&#x6237;&#x767B;&#x5F55;&#x5BC6;&#x7801;, &#x5E76;&#x4E14;&#x9700;&#x8981;&#x5982;&#x4E0A;&#x9762;&#x4E00;&#x6837;&#x4FEE;&#x6539; <code>/home/&#x7528;&#x6237;&#x540D;/.ssh/authorized_keys</code>,&#x91CD;&#x542F; ssh &#x540E;&#x9000;&#x51FA;&#x518D;&#x6B21;&#x767B;&#x5F55;&#x5373;&#x53EF;&#x4F7F;&#x7528;&#x666E;&#x901A;&#x7528;&#x6237;</li>
+</ul>
+</blockquote>
+<h3 id="&#x5B9E;&#x64CD;&#x622A;&#x5C4F;"><a name="&#x5B9E;&#x64CD;&#x622A;&#x5C4F;" class="plugin-anchor" href="#&#x5B9E;&#x64CD;&#x622A;&#x5C4F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B9E;&#x64CD;&#x622A;&#x5C4F;</h3>
 <div align="center">
   <img src="images/02.jpg"><br>
 </div>
@@ -832,7 +831,7 @@ PasswordAuthentication yes
   <img src="images/11.jpg"><br>ssh root@ip &#x767B;&#x5F55;
 </div>
 <br></p>
-<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> <a href="https://github.com/Xiechengqi" target="_blank">Xiechengqi</a> </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> <strong>&#x6700;&#x65B0;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;</strong> 2019-12-07 09:11:40 </span> </footer>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> <a href="https://github.com/Xiechengqi" target="_blank">Xiechengqi</a> </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> <strong>&#x6700;&#x65B0;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;</strong> 2019-12-07 09:42:11 </span> </footer>
 <script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
                                 
                                 </section>
@@ -876,7 +875,7 @@ PasswordAuthentication yes
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"AWS_lightsail","level":"1.5.1","depth":2,"next":{"title":"GCP_VM实例创建和基本配置","level":"1.5.2","depth":2,"path":"VPS/GCP_VM实例创建和基本配置.md","ref":"VPS/GCP_VM实例创建和基本配置.md","articles":[]},"previous":{"title":"VPS","level":"1.5","depth":1,"path":"VPS/README.md","ref":"VPS/README.md","articles":[{"title":"AWS_lightsail","level":"1.5.1","depth":2,"path":"VPS/AWS_lightsail.md","ref":"VPS/AWS_lightsail.md","articles":[]},{"title":"GCP_VM实例创建和基本配置","level":"1.5.2","depth":2,"path":"VPS/GCP_VM实例创建和基本配置.md","ref":"VPS/GCP_VM实例创建和基本配置.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-highlight","-livereload","-sharing","popup","pageview-count","code","chapter-fold","back-to-top-button","hide-element","github-buttons","github","splitter","search-pro","anchors","page-footer-ex","advanced-emoji","sharing-plus"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"github":{"url":"https://github.com/Xiechengqi/test"},"page-footer-ex":{"copyright":"[Xiechengqi](https://github.com/Xiechengqi)","markdown":true,"update_label":"<strong>最新修订时间：</strong>","update_format":"YYYY-MM-DD HH:mm:ss"},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"popup":{},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"back-to-top-button":{},"pageview-count":{},"github-buttons":{"buttons":[{"user":"Xiechengqi","repo":"test","type":"star","size":"small","count":true}]},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":false,"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*","description":"日常学习笔记"},"file":{"path":"VPS/AWS_lightsail.md","mtime":"2019-12-07T01:11:40.236Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-07T01:11:57.052Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"AWS_lightsail","level":"1.5.1","depth":2,"next":{"title":"GCP_VM实例创建和基本配置","level":"1.5.2","depth":2,"path":"VPS/GCP_VM实例创建和基本配置.md","ref":"VPS/GCP_VM实例创建和基本配置.md","articles":[]},"previous":{"title":"VPS","level":"1.5","depth":1,"path":"VPS/README.md","ref":"VPS/README.md","articles":[{"title":"AWS_lightsail","level":"1.5.1","depth":2,"path":"VPS/AWS_lightsail.md","ref":"VPS/AWS_lightsail.md","articles":[]},{"title":"GCP_VM实例创建和基本配置","level":"1.5.2","depth":2,"path":"VPS/GCP_VM实例创建和基本配置.md","ref":"VPS/GCP_VM实例创建和基本配置.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-highlight","-livereload","-sharing","popup","pageview-count","code","chapter-fold","back-to-top-button","hide-element","github-buttons","github","splitter","search-pro","anchors","page-footer-ex","advanced-emoji","sharing-plus"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"github":{"url":"https://github.com/Xiechengqi/test"},"page-footer-ex":{"copyright":"[Xiechengqi](https://github.com/Xiechengqi)","markdown":true,"update_label":"<strong>最新修订时间：</strong>","update_format":"YYYY-MM-DD HH:mm:ss"},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"popup":{},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"back-to-top-button":{},"pageview-count":{},"github-buttons":{"buttons":[{"user":"Xiechengqi","repo":"test","type":"star","size":"small","count":true}]},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":false,"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*","description":"日常学习笔记"},"file":{"path":"VPS/AWS_lightsail.md","mtime":"2019-12-07T01:42:11.484Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-07T01:42:18.986Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
