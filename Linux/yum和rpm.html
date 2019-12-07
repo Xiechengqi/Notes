@@ -1,0 +1,917 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>yum和rpm · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-footer-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="从BashShell启动“窥探”Linux环境变量相关文件.html" />
+    
+    
+    <link rel="prev" href="YAML-配置文件语言.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"Xiechengqi","repo":"test","type":"star","size":"small","count":true}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Linux
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="APT-剖析详解.html">
+            
+                <a href="APT-剖析详解.html">
+            
+                    
+                    APT-剖析详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="Linux性能相关常用命令.html">
+            
+                <a href="Linux性能相关常用命令.html">
+            
+                    
+                    Linux性能相关常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="Linux编译安装软件包详解.html">
+            
+                <a href="Linux编译安装软件包详解.html">
+            
+                    
+                    Linux编译安装软件包详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" data-path="Linux常用命令.html">
+            
+                <a href="Linux常用命令.html">
+            
+                    
+                    Linux常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5" data-path="Linux程序存放目录.html">
+            
+                <a href="Linux程序存放目录.html">
+            
+                    
+                    Linux程序存放目录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.6" data-path="Linux文件系统学习.html">
+            
+                <a href="Linux文件系统学习.html">
+            
+                    
+                    Linux文件系统学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.7" data-path="Linux小知识.html">
+            
+                <a href="Linux小知识.html">
+            
+                    
+                    Linux小知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.8" data-path="Linux用户和用户组管理.html">
+            
+                <a href="Linux用户和用户组管理.html">
+            
+                    
+                    Linux用户和用户组管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.9" data-path="Linux用户增删改等学习.html">
+            
+                <a href="Linux用户增删改等学习.html">
+            
+                    
+                    Linux用户增删改等学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.10" data-path="Linux主机、虚拟机和docker网络配置.html">
+            
+                <a href="Linux主机、虚拟机和docker网络配置.html">
+            
+                    
+                    Linux主机、虚拟机和docker网络配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.11" data-path="SSH详解.html">
+            
+                <a href="SSH详解.html">
+            
+                    
+                    SSH详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.12" data-path="Tomcat和Ngnix和Apache.html">
+            
+                <a href="Tomcat和Ngnix和Apache.html">
+            
+                    
+                    Tomcat和Ngnix和Apache
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.13" data-path="trans命令.html">
+            
+                <a href="trans命令.html">
+            
+                    
+                    trans命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.14" data-path="UbuntuSoftwareInstall.html">
+            
+                <a href="UbuntuSoftwareInstall.html">
+            
+                    
+                    UbuntuSoftwareInstall
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.15" data-path="bin.html">
+            
+                <a href="bin.html">
+            
+                    
+                    bin
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.16" data-path="ffmpeg详解.html">
+            
+                <a href="ffmpeg详解.html">
+            
+                    
+                    ffmpeg详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.17" data-path="YAML-配置文件语言.html">
+            
+                <a href="YAML-配置文件语言.html">
+            
+                    
+                    YAML-配置文件语言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.1.18" data-path="yum和rpm.html">
+            
+                <a href="yum和rpm.html">
+            
+                    
+                    yum和rpm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.19" data-path="从BashShell启动“窥探”Linux环境变量相关文件.html">
+            
+                <a href="从BashShell启动“窥探”Linux环境变量相关文件.html">
+            
+                    
+                    从BashShell启动“窥探”Linux环境变量相关文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.20" data-path="防火墙学习.html">
+            
+                <a href="防火墙学习.html">
+            
+                    
+                    防火墙学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.21" data-path="通过Linux开机启动项展开学习.html">
+            
+                <a href="通过Linux开机启动项展开学习.html">
+            
+                    
+                    通过Linux开机启动项展开学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.22" data-path="新创建主机常用初始化配置.html">
+            
+                <a href="新创建主机常用初始化配置.html">
+            
+                    
+                    新创建主机常用初始化配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.23" data-path="正则表达式学习.html">
+            
+                <a href="正则表达式学习.html">
+            
+                    
+                    正则表达式学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.24" data-path="终端代理.html">
+            
+                <a href="终端代理.html">
+            
+                    
+                    终端代理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../Shell/">
+            
+                <a href="../Shell/">
+            
+                    
+                    Shell
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../Shell/shell小知识.html">
+            
+                <a href="../Shell/shell小知识.html">
+            
+                    
+                    shell小知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../Shell/Linux文本操作三大利器-grep、sed、awk.html">
+            
+                <a href="../Shell/Linux文本操作三大利器-grep、sed、awk.html">
+            
+                    
+                    Linux文本操作三大利器-grep、sed、awk
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../Shell/Shell文本处理常用工具补遗.html">
+            
+                <a href="../Shell/Shell文本处理常用工具补遗.html">
+            
+                    
+                    Shell文本处理常用工具补遗
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../Shell/句子解析.html">
+            
+                <a href="../Shell/句子解析.html">
+            
+                    
+                    句子解析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../Shell/识别是否是root用户.html">
+            
+                <a href="../Shell/识别是否是root用户.html">
+            
+                    
+                    识别是否是root用户
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../Shell/识别系统.html">
+            
+                <a href="../Shell/识别系统.html">
+            
+                    
+                    识别系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../Docker/">
+            
+                <a href="../Docker/">
+            
+                    
+                    Docker
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../Docker/Docker必知单词.html">
+            
+                <a href="../Docker/Docker必知单词.html">
+            
+                    
+                    Docker必知单词
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../Docker/Docker基础学习.html">
+            
+                <a href="../Docker/Docker基础学习.html">
+            
+                    
+                    Docker基础学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../Docker/Docker小知识.html">
+            
+                <a href="../Docker/Docker小知识.html">
+            
+                    
+                    Docker小知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Git/">
+            
+                <a href="../Git/">
+            
+                    
+                    Git
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Git/git学习.html">
+            
+                <a href="../Git/git学习.html">
+            
+                    
+                    git学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../VPS/">
+            
+                <a href="../VPS/">
+            
+                    
+                    VPS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../VPS/AWS_lightsail.html">
+            
+                <a href="../VPS/AWS_lightsail.html">
+            
+                    
+                    AWS_lightsail
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../VPS/GCP_VM实例创建和基本配置.html">
+            
+                <a href="../VPS/GCP_VM实例创建和基本配置.html">
+            
+                    
+                    GCP_VM实例创建和基本配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >yum和rpm</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="yum-&#x548C;-rpm"><a name="yum-&#x548C;-rpm" class="plugin-anchor" href="#yum-&#x548C;-rpm"><i class="fa fa-link" aria-hidden="true"></i></a>Yum &#x548C; RPM</h2>
+<p>RedHat &#x7CFB;&#x5217;&#x8F6F;&#x4EF6;&#x5B89;&#x88C5;&#x5927;&#x81F4;&#x53EF;&#x4EE5;&#x5206;&#x4E3A;&#x4E24;&#x79CD;&#xFF1A;</p>
+<ul>
+<li>rpm &#x6587;&#x4EF6;&#x5B89;&#x88C5; - &#x4F7F;&#x7528; rpm &#x6307;&#x4EE4; &#x7C7B;&#x4F3C; [ubuntu] deb &#x6587;&#x4EF6;&#x5B89;&#x88C5;&#xFF0C;&#x4F7F;&#x7528; dpkg&#x6307;&#x4EE4;</li>
+<li>yum &#x5B89;&#x88C5; - &#x7C7B;&#x4F3C; [ubuntu] apt &#x5B89;&#x88C5;</li>
+</ul>
+<h2 id="rpm"><a name="rpm" class="plugin-anchor" href="#rpm"><i class="fa fa-link" aria-hidden="true"></i></a>RPM</h2>
+<h3 id="rpm-&#x5305;&#x547D;&#x540D;&#x89C4;&#x8303;"><a name="rpm-&#x5305;&#x547D;&#x540D;&#x89C4;&#x8303;" class="plugin-anchor" href="#rpm-&#x5305;&#x547D;&#x540D;&#x89C4;&#x8303;"><i class="fa fa-link" aria-hidden="true"></i></a>rpm &#x5305;&#x547D;&#x540D;&#x89C4;&#x8303;</h3>
+<ul>
+<li><p><kbd><strong>&#x5305;&#x540D;</strong></kbd>-<kbd><strong>&#x7248;&#x672C;&#x4FE1;&#x606F;</strong></kbd>-<kbd><strong>&#x53D1;&#x5E03;&#x7248;&#x672C;&#x53F7;</strong></kbd>.<kbd><strong>&#x8FD0;&#x884C;&#x5E73;&#x53F0;</strong></kbd></p>
+</li>
+<li><pre><code class="lang-bash">zabbix-agent-4.4.0-1.el7.x86_64.rpm 
+zabbix-release-4.4-1.el7.noarch.rpm   # noarch &#x4EE3;&#x8868;&#x7684;&#x662F;&#x8F6F;&#x4EF6;&#x53EF;&#x4EE5;&#x5E73;&#x53F0;&#x517C;&#x5BB9;
+</code></pre>
+</li>
+</ul>
+<h3 id="&#x5E38;&#x7528;&#x547D;&#x4EE4;"><a name="&#x5E38;&#x7528;&#x547D;&#x4EE4;" class="plugin-anchor" href="#&#x5E38;&#x7528;&#x547D;&#x4EE4;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5E38;&#x7528;&#x547D;&#x4EE4;</h3>
+<ul>
+<li><p><kbd><strong>&#x67E5;&#x770B;&#x5DF2;&#x5B89;&#x88C5;&#x8F6F;&#x4EF6;&#x4FE1;&#x606F;</strong></kbd></p>
+<ul>
+<li><kbd><strong>rpm -qa</strong></kbd> - &#x67E5;&#x770B;&#x7CFB;&#x7EDF;&#x4E2D;&#x5DF2;&#x7ECF;&#x5B89;&#x88C5;&#x7684;&#x8F6F;&#x4EF6;</li>
+<li><kbd><strong>rpm -qf [&#x6587;&#x4EF6;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;]</strong></kbd> - &#x67E5;&#x770B;&#x4E00;&#x4E2A;&#x5DF2;&#x7ECF;&#x5B89;&#x88C5;&#x7684;&#x6587;&#x4EF6;&#x5C5E;&#x4E8E;&#x54EA;&#x4E2A;&#x8F6F;&#x4EF6;&#x5305;</li>
+<li><kbd><strong>rpm -ql [&#x8F6F;&#x4EF6;&#x540D;]</strong></kbd> - &#x67E5;&#x770B;&#x5DF2;&#x5B89;&#x88C5;&#x8F6F;&#x4EF6;&#x5305;&#x7684;&#x5B89;&#x88C5;&#x8DEF;&#x5F84;&#xFF0C;<code>[&#x8F6F;&#x4EF6;&#x540D;]</code> &#x662F; rpm &#x5305;&#x53BB;&#x9664;&#x5E73;&#x53F0;&#x4FE1;&#x606F;&#x548C;&#x540E;&#x7F00;&#x540E;&#x7684;&#x4FE1;&#x606F;</li>
+<li><kbd><strong>rpm -qi [&#x8F6F;&#x4EF6;&#x540D;]</strong></kbd> - &#x67E5;&#x770B;&#x5DF2;&#x5B89;&#x88C5;&#x8F6F;&#x4EF6;&#x5305;&#x7684;&#x4FE1;&#x606F;</li>
+<li><kbd><strong>rpm -qc [&#x8F6F;&#x4EF6;&#x540D;]</strong></kbd> - &#x67E5;&#x770B;&#x5DF2;&#x5B89;&#x88C5;&#x8F6F;&#x4EF6;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</li>
+<li><kbd><strong>rpm -qd [&#x8F6F;&#x4EF6;&#x540D;]</strong></kbd> - &#x67E5;&#x770B;&#x5DF2;&#x7ECF;&#x5B89;&#x88C5;&#x8F6F;&#x4EF6;&#x7684;&#x6587;&#x6863;&#x5B89;&#x88C5;&#x4F4D;&#x7F6E;</li>
+<li><kbd><strong>rpm -qR [&#x8F6F;&#x4EF6;&#x540D;]</strong></kbd> - &#x67E5;&#x770B;&#x5DF2;&#x5B89;&#x88C5;&#x8F6F;&#x4EF6;&#x6240;&#x4F9D;&#x8D56;&#x7684;&#x8F6F;&#x4EF6;&#x5305;&#x53CA;&#x6587;&#x4EF6;</li>
+</ul>
+</li>
+<li><p><kbd><strong>&#x67E5;&#x770B;&#x672A;&#x5B89;&#x88C5;&#x8F6F;&#x4EF6;&#x4FE1;&#x606F;</strong></kbd> </p>
+<ul>
+<li><kbd><strong>rpm -qpi [rpm&#x6587;&#x4EF6;]</strong></kbd> - &#x67E5;&#x770B;&#x8F6F;&#x4EF6;&#x5305;&#x7684;&#x7528;&#x9014;&#x3001;&#x7248;&#x672C;&#x7B49;&#x4FE1;&#x606F;</li>
+<li><kbd><strong>rpm -qpl [rpm&#x6587;&#x4EF6;]</strong></kbd> - &#x67E5;&#x770B;&#x8F6F;&#x4EF6;&#x5305;&#x6240;&#x5305;&#x542B;&#x7684;&#x6587;&#x4EF6;</li>
+<li><kbd><strong>rpm -qpc [rpm&#x6587;&#x4EF6;]</strong></kbd> - &#x67E5;&#x770B;&#x8F6F;&#x4EF6;&#x5305;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</li>
+<li><kbd><strong>rpm -qpR [rpm&#x6587;&#x4EF6;]</strong></kbd> - &#x67E5;&#x770B;&#x8F6F;&#x4EF6;&#x5305;&#x7684;&#x4F9D;&#x8D56;&#x5173;&#x7CFB;</li>
+</ul>
+</li>
+<li><kbd><strong>&#x8F6F;&#x4EF6;&#x5305;&#x7684;&#x5B89;&#x88C5;&#x3001;&#x5347;&#x7EA7;&#x3001;&#x5220;&#x9664;&#x7B49;</strong></kbd> - <ul>
+<li><kbd><strong>rpm -ivh [rpm&#x6587;&#x4EF6;]</strong></kbd> - &#x5B89;&#x88C5;</li>
+<li><kbd><strong>rpm -Uvh [rpm&#x6587;&#x4EF6;]</strong></kbd> - &#x5347;&#x7EA7;</li>
+<li><kbd><strong>rpm -e [&#x8F6F;&#x4EF6;&#x540D;]</strong></kbd> - &#x5220;&#x9664;</li>
+<li><kbd><strong>rpm -e [&#x8F6F;&#x4EF6;&#x540D;] --nodeps</strong></kbd> - &#x4E0D;&#x7BA1;&#x4F9D;&#x8D56;&#x95EE;&#x9898;&#xFF0C;&#x5F3A;&#x5236;&#x5220;&#x9664;&#x8F6F;&#x4EF6;</li>
+<li><kbd><strong>rpm --import [&#x7B7E;&#x540D;&#x6587;&#x4EF6;]</strong></kbd> - &#x5BFC;&#x5165;&#x7B7E;&#x540D;</li>
+</ul>
+</li>
+</ul>
+<h2 id="yum"><a name="yum" class="plugin-anchor" href="#yum"><i class="fa fa-link" aria-hidden="true"></i></a>YUM</h2>
+<ul>
+<li>yum &#x53EF;&#x4EE5;&#x66F4;&#x65B9;&#x4FBF;&#x7684;&#x6DFB;&#x52A0;&#x3001;&#x5220;&#x9664;&#x3001;&#x66F4;&#x65B0; RPM &#x5305;&#xFF0C;&#x5E76;&#x4E14;&#x80FD;&#x81EA;&#x52A8;&#x89E3;&#x51B3;&#x5305;&#x7684;&#x501A;&#x8D56;&#x95EE;&#x9898;</li>
+</ul>
+<p><kbd><strong>rpm -ivh <a href="https://opsx.alibaba.com/mirror/detail/1859610790?lang=zh-CN" target="_blank">https://opsx.alibaba.com/mirror/detail/1859610790?lang=zh-CN</a></strong></kbd> - &#x5B89;&#x88C5; yum     </p>
+<p><kbd><strong>yum check-update</strong></kbd> - &#x68C0;&#x67E5;&#x53EF;&#x4EE5;&#x66F4;&#x65B0;&#x7684;&#x8F6F;&#x4EF6;&#x5305; </p>
+<p><kbd><strong>yum -y update</strong></kbd> - &#x5347;&#x7EA7;&#x6240;&#x6709;&#x5305;&#x540C;&#x65F6;&#x4E5F;&#x5347;&#x7EA7;&#x8F6F;&#x4EF6;&#x548C;&#x7CFB;&#x7EDF;&#x5185;&#x6838;</p>
+<p><kbd><strong>yum -y upgrade</strong></kbd> - &#x53EA;&#x5347;&#x7EA7;&#x6240;&#x6709;&#x5305;&#xFF0C;&#x4E0D;&#x5347;&#x7EA7;&#x8F6F;&#x4EF6;&#x548C;&#x7CFB;&#x7EDF;&#x5185;&#x6838;</p>
+<p><kbd><strong>yum update [&#x8F6F;&#x4EF6;&#x540D;]</strong></kbd> - &#x66F4;&#x65B0;&#x7279;&#x5B9A;&#x7684;&#x8F6F;&#x4EF6;&#x5305; </p>
+<p><kbd><strong>yum install [rpm&#x6587;&#x4EF6;]</strong></kbd> - &#x5B89;&#x88C5; rpm &#x5305;</p>
+<p><kbd><strong>yum remove [rpm&#x6587;&#x4EF6;]</strong></kbd> - &#x5220;&#x9664; rpm &#x5305;</p>
+<p><kbd><strong>yum clean all</strong></kbd> - &#x6E05;&#x9664;&#x7F13;&#x5B58;&#x4E2D;&#x65E7;&#x7684; rpm &#x5934;&#x6587;&#x4EF6;&#x548C;&#x5305;&#x6587;&#x4EF6; </p>
+<p><kbd><strong>yum clean packages</strong></kbd> - &#x6E05;&#x695A;&#x7F13;&#x5B58;&#x4E2D; rpm &#x5305;&#x6587;&#x4EF6;</p>
+<p><kbd><strong>yum clean  headers</strong></kbd> - &#x6E05;&#x695A;&#x7F13;&#x5B58;&#x4E2D; rpm &#x7684;&#x5934;&#x6587;&#x4EF6;</p>
+<p><kbd><strong>yum clean old headers</strong></kbd> - &#x6E05;&#x9664;&#x7F13;&#x5B58;&#x4E2D;&#x65E7;&#x7684;&#x5934;&#x6587;&#x4EF6; </p>
+<p><kbd><strong>yum list</strong></kbd> - &#x5217;&#x51FA;&#x8D44;&#x6E90;&#x5E93;&#x4E2D;&#x6240;&#x6709;&#x53EF;&#x4EE5;&#x5B89;&#x88C5;&#x6216;&#x66F4;&#x65B0;&#x7684; rpm &#x5305;</p>
+<p><kbd><strong>yum list google*</strong></kbd> - &#x53EF;&#x4EE5;&#x5728; rpm &#x5305;&#x540D;&#x4E2D;&#x4F7F;&#x7528;&#x901A;&#x914D;&#x7B26;,&#x67E5;&#x8BE2;&#x7C7B;&#x4F3C;&#x7684; rpm &#x5305;</p>
+<p><kbd><strong>yum list updates</strong></kbd> - &#x5217;&#x51FA;&#x8D44;&#x6E90;&#x5E93;&#x4E2D;&#x6240;&#x6709;&#x53EF;&#x4EE5;&#x66F4;&#x65B0;&#x7684; rpm &#x5305; </p>
+<p><kbd><strong>yum list installed</strong></kbd> - &#x5217;&#x51FA;&#x5DF2;&#x7ECF;&#x5B89;&#x88C5;&#x7684;&#x6240;&#x6709;&#x7684; rpm &#x5305; </p>
+<p><kbd><strong>yum list extras</strong></kbd> - &#x5217;&#x51FA;&#x5DF2;&#x7ECF;&#x5B89;&#x88C5;&#x7684;&#x4F46;&#x662F;&#x4E0D;&#x5305;&#x542B;&#x5728;&#x8D44;&#x6E90;&#x5E93;&#x4E2D;&#x7684; rpm &#x5305; </p>
+<p><kbd><strong>yum info</strong> </kbd> - &#x5217;&#x51FA;&#x8D44;&#x6E90;&#x5E93;&#x4E2D;&#x6240;&#x6709;&#x53EF;&#x4EE5;&#x5B89;&#x88C5;&#x6216;&#x66F4;&#x65B0;&#x7684; rpm &#x5305;&#x7684;&#x4FE1;&#x606F;</p>
+<p><kbd><strong>yum info google*</strong></kbd> - &#x5217;&#x51FA;&#x8D44;&#x6E90;&#x5E93;&#x4E2D;&#x7279;&#x5B9A;&#x7684;&#x53EF;&#x4EE5;&#x5B89;&#x88C5;&#x6216;&#x66F4;&#x65B0;&#x4EE5;&#x53CA;&#x5DF2;&#x7ECF;&#x5B89;&#x88C5;&#x7684;  rpm &#x5305;&#x7684;&#x4FE1;&#x606F;</p>
+<p><kbd><strong>yum info updates</strong></kbd> - &#x5217;&#x51FA;&#x8D44;&#x6E90;&#x5E93;&#x4E2D;&#x6240;&#x6709;&#x53EF;&#x4EE5;&#x66F4;&#x65B0;&#x7684; rpm &#x5305;&#x7684;&#x4FE1;&#x606F; </p>
+<p><kbd><strong>yum info installed</strong></kbd> - &#x5217;&#x51FA;&#x5DF2;&#x7ECF;&#x5B89;&#x88C5;&#x7684;&#x6240;&#x6709;&#x7684; rpm &#x5305;&#x7684;&#x4FE1;&#x606F; </p>
+<p><kbd><strong>yum info extras</strong></kbd> - &#x5217;&#x51FA;&#x5DF2;&#x7ECF;&#x5B89;&#x88C5;&#x7684;&#x4F46;&#x662F;&#x4E0D;&#x5305;&#x542B;&#x5728;&#x8D44;&#x6E90;&#x5E93;&#x4E2D;&#x7684; rpm &#x5305;&#x7684;&#x4FE1;&#x606F; </p>
+<p><kbd><strong>yum search google</strong></kbd> - &#x641C;&#x7D22;&#x5339;&#x914D;&#x7279;&#x5B9A;&#x5B57;&#x7B26;&#x7684; rpm &#x5305;</p>
+<p><kbd><strong>yum provides google</strong></kbd> - &#x641C;&#x7D22;&#x5305;&#x542B;&#x7279;&#x5B9A;&#x6587;&#x4EF6;&#x7684; rpm &#x5305;</p>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> <a href="https://github.com/Xiechengqi" target="_blank">Xiechengqi</a> </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> <strong>&#x6700;&#x65B0;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;</strong> 2019-12-06 21:06:22 </span> </footer>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="YAML-配置文件语言.html" class="navigation navigation-prev " aria-label="Previous page: YAML-配置文件语言">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="从BashShell启动“窥探”Linux环境变量相关文件.html" class="navigation navigation-next " aria-label="Next page: 从BashShell启动“窥探”Linux环境变量相关文件">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"yum和rpm","level":"1.1.18","depth":2,"next":{"title":"从BashShell启动“窥探”Linux环境变量相关文件","level":"1.1.19","depth":2,"path":"Linux/从BashShell启动“窥探”Linux环境变量相关文件.md","ref":"Linux/从BashShell启动“窥探”Linux环境变量相关文件.md","articles":[]},"previous":{"title":"YAML-配置文件语言","level":"1.1.17","depth":2,"path":"Linux/YAML-配置文件语言.md","ref":"Linux/YAML-配置文件语言.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-highlight","-livereload","-sharing","popup","pageview-count","code","chapter-fold","back-to-top-button","hide-element","github-buttons","github","splitter","search-pro","anchors","page-footer-ex","advanced-emoji","sharing-plus","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"github":{"url":"https://github.com/Xiechengqi/test"},"page-footer-ex":{"copyright":"[Xiechengqi](https://github.com/Xiechengqi)","markdown":true,"update_label":"<strong>最新修订时间：</strong>","update_format":"YYYY-MM-DD HH:mm:ss"},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"popup":{},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"back-to-top-button":{},"pageview-count":{},"github-buttons":{"buttons":[{"user":"Xiechengqi","repo":"test","type":"star","size":"small","count":true}]},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":false,"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*","description":"日常学习笔记"},"file":{"path":"Linux/yum和rpm.md","mtime":"2019-12-06T13:06:22.345Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-06T13:49:58.604Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
