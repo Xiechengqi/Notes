@@ -23,7 +23,7 @@
 * <kbd>**工作区**</kbd> -> <kbd>**git add**</kbd> - > <kbd>**暂存区**</kbd>  -> <kbd>**git commit**</kbd> -> <kbd>**本地仓库**</kbd> -> <kbd>**git push**</kbd> -> <kbd>**远程仓库**</kbd>
 * `git init` 时默认创建了一个 master 分支，后续 `git commit`就是往 master 上提交
 
-![](/home/xcq/桌面/codeLearn/git/github/XcqDailyLearningNotes/Linux/images/git_command.png)
+![](./images/git_command.png)
 
 
 
