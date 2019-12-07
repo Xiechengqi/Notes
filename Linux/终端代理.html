@@ -1,0 +1,943 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>终端代理 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-footer-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../Shell/" />
+    
+    
+    <link rel="prev" href="正则表达式学习.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"Xiechengqi","repo":"test","type":"star","size":"small","count":true}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Linux
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="APT-剖析详解.html">
+            
+                <a href="APT-剖析详解.html">
+            
+                    
+                    APT-剖析详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="Linux性能相关常用命令.html">
+            
+                <a href="Linux性能相关常用命令.html">
+            
+                    
+                    Linux性能相关常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="Linux编译安装软件包详解.html">
+            
+                <a href="Linux编译安装软件包详解.html">
+            
+                    
+                    Linux编译安装软件包详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" data-path="Linux常用命令.html">
+            
+                <a href="Linux常用命令.html">
+            
+                    
+                    Linux常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5" data-path="Linux程序存放目录.html">
+            
+                <a href="Linux程序存放目录.html">
+            
+                    
+                    Linux程序存放目录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.6" data-path="Linux文件系统学习.html">
+            
+                <a href="Linux文件系统学习.html">
+            
+                    
+                    Linux文件系统学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.7" data-path="Linux小知识.html">
+            
+                <a href="Linux小知识.html">
+            
+                    
+                    Linux小知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.8" data-path="Linux用户和用户组管理.html">
+            
+                <a href="Linux用户和用户组管理.html">
+            
+                    
+                    Linux用户和用户组管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.9" data-path="Linux用户增删改等学习.html">
+            
+                <a href="Linux用户增删改等学习.html">
+            
+                    
+                    Linux用户增删改等学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.10" data-path="Linux主机、虚拟机和docker网络配置.html">
+            
+                <a href="Linux主机、虚拟机和docker网络配置.html">
+            
+                    
+                    Linux主机、虚拟机和docker网络配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.11" data-path="SSH详解.html">
+            
+                <a href="SSH详解.html">
+            
+                    
+                    SSH详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.12" data-path="Tomcat和Ngnix和Apache.html">
+            
+                <a href="Tomcat和Ngnix和Apache.html">
+            
+                    
+                    Tomcat和Ngnix和Apache
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.13" data-path="trans命令.html">
+            
+                <a href="trans命令.html">
+            
+                    
+                    trans命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.14" data-path="UbuntuSoftwareInstall.html">
+            
+                <a href="UbuntuSoftwareInstall.html">
+            
+                    
+                    UbuntuSoftwareInstall
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.15" data-path="bin.html">
+            
+                <a href="bin.html">
+            
+                    
+                    bin
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.16" data-path="ffmpeg详解.html">
+            
+                <a href="ffmpeg详解.html">
+            
+                    
+                    ffmpeg详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.17" data-path="YAML-配置文件语言.html">
+            
+                <a href="YAML-配置文件语言.html">
+            
+                    
+                    YAML-配置文件语言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.18" data-path="yum和rpm.html">
+            
+                <a href="yum和rpm.html">
+            
+                    
+                    yum和rpm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.19" data-path="从BashShell启动“窥探”Linux环境变量相关文件.html">
+            
+                <a href="从BashShell启动“窥探”Linux环境变量相关文件.html">
+            
+                    
+                    从BashShell启动“窥探”Linux环境变量相关文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.20" data-path="防火墙学习.html">
+            
+                <a href="防火墙学习.html">
+            
+                    
+                    防火墙学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.21" data-path="通过Linux开机启动项展开学习.html">
+            
+                <a href="通过Linux开机启动项展开学习.html">
+            
+                    
+                    通过Linux开机启动项展开学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.22" data-path="新创建主机常用初始化配置.html">
+            
+                <a href="新创建主机常用初始化配置.html">
+            
+                    
+                    新创建主机常用初始化配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.23" data-path="正则表达式学习.html">
+            
+                <a href="正则表达式学习.html">
+            
+                    
+                    正则表达式学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.1.24" data-path="终端代理.html">
+            
+                <a href="终端代理.html">
+            
+                    
+                    终端代理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../Shell/">
+            
+                <a href="../Shell/">
+            
+                    
+                    Shell
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../Shell/shell小知识.html">
+            
+                <a href="../Shell/shell小知识.html">
+            
+                    
+                    shell小知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../Shell/Linux文本操作三大利器-grep、sed、awk.html">
+            
+                <a href="../Shell/Linux文本操作三大利器-grep、sed、awk.html">
+            
+                    
+                    Linux文本操作三大利器-grep、sed、awk
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../Shell/Shell文本处理常用工具补遗.html">
+            
+                <a href="../Shell/Shell文本处理常用工具补遗.html">
+            
+                    
+                    Shell文本处理常用工具补遗
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../Shell/句子解析.html">
+            
+                <a href="../Shell/句子解析.html">
+            
+                    
+                    句子解析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../Shell/识别是否是root用户.html">
+            
+                <a href="../Shell/识别是否是root用户.html">
+            
+                    
+                    识别是否是root用户
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../Shell/识别系统.html">
+            
+                <a href="../Shell/识别系统.html">
+            
+                    
+                    识别系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../Docker/">
+            
+                <a href="../Docker/">
+            
+                    
+                    Docker
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../Docker/Docker必知单词.html">
+            
+                <a href="../Docker/Docker必知单词.html">
+            
+                    
+                    Docker必知单词
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../Docker/Docker基础学习.html">
+            
+                <a href="../Docker/Docker基础学习.html">
+            
+                    
+                    Docker基础学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../Docker/Docker小知识.html">
+            
+                <a href="../Docker/Docker小知识.html">
+            
+                    
+                    Docker小知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Git/">
+            
+                <a href="../Git/">
+            
+                    
+                    Git
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Git/git学习.html">
+            
+                <a href="../Git/git学习.html">
+            
+                    
+                    git学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../VPS/">
+            
+                <a href="../VPS/">
+            
+                    
+                    VPS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../VPS/AWS_lightsail.html">
+            
+                <a href="../VPS/AWS_lightsail.html">
+            
+                    
+                    AWS_lightsail
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../VPS/GCP_VM实例创建和基本配置.html">
+            
+                <a href="../VPS/GCP_VM实例创建和基本配置.html">
+            
+                    
+                    GCP_VM实例创建和基本配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >终端代理</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="ubuntu-&#x684C;&#x9762;&#x7EC8;&#x7AEF;&#x4EE3;&#x7406;"><a name="ubuntu-&#x684C;&#x9762;&#x7EC8;&#x7AEF;&#x4EE3;&#x7406;" class="plugin-anchor" href="#ubuntu-&#x684C;&#x9762;&#x7EC8;&#x7AEF;&#x4EE3;&#x7406;"><i class="fa fa-link" aria-hidden="true"></i></a>Ubuntu &#x684C;&#x9762;&#x7EC8;&#x7AEF;&#x4EE3;&#x7406;</h1>
+<blockquote>
+<p>&#x6298;&#x817E;&#x7EC8;&#x7AEF;&#x5F00;&#x542F;&#x4EE3;&#x7406;&#x5B9E;&#x5728;&#x662F;&#x4E00;&#x6CE2;&#x4E09;&#x6298;&#xFF0C;&#x53CD;&#x53CD;&#x590D;&#x590D;&#x5C1D;&#x8BD5;&#x4E86;&#x6570;&#x6B21;&#xFF0C;&#x4E4B;&#x524D;&#x6CA1;&#x4E00;&#x6B21;&#x6210;&#x529F;&#xFF0C;&#x4F46;&#x6BCF;&#x6B21;&#x9047;&#x5230;&#x9700;&#x8981;&#x5B89;&#x88C5;&#x56FD;&#x5916;&#x6E90;&#x7684;&#x8F6F;&#x4EF6;&#x65F6;&#x5C31;&#x75DB;&#x4E0D;&#x6B32;&#x751F;&#xFF01;&#x8DE8;&#x5EA6;&#x4E00;&#x4E24;&#x5E74;&#x7684;&#x4E00;&#x4E2A;&#x95EE;&#x9898;&#x7EC8;&#x4E8E;&#x89E3;&#x51B3;&#x4E86;&#xFF0C;&#x8BB0;&#x5F55;&#x4E00;&#x4E0B;</p>
+</blockquote>
+<h2 id="&#x4E00;&#x3001;&#x7EC8;&#x7AEF;&#x4EE3;&#x7406;&#x539F;&#x7406;"><a name="&#x4E00;&#x3001;&#x7EC8;&#x7AEF;&#x4EE3;&#x7406;&#x539F;&#x7406;" class="plugin-anchor" href="#&#x4E00;&#x3001;&#x7EC8;&#x7AEF;&#x4EE3;&#x7406;&#x539F;&#x7406;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E00;&#x3001;&#x7EC8;&#x7AEF;&#x4EE3;&#x7406;&#x539F;&#x7406;</h2>
+<ul>
+<li>&#x7EC8;&#x7AEF;&#x4EE3;&#x7406;&#x7A76;&#x5176;&#x539F;&#x7406;&#x548C; chrome &#x6269;&#x5C55; Proxy SwitchyOmega &#x662F;&#x4E00;&#x6837;&#x7684;&#xFF0C;&#x90FD;&#x662F;&#x4E3A;&#x4E86;&#x5C06; socks &#x534F;&#x8BAE;&#x7684;&#x6570;&#x636E;&#x8F6C;&#x6362;&#x6210; http &#x534F;&#x8BAE;, &#x56E0;&#x4E3A;&#x7EC8;&#x7AEF;&#x5F88;&#x591A;&#x4E0B;&#x8F7D;&#x5B89;&#x88C5;&#x547D;&#x4EE4; - wget&#x3001;curl&#x3001;git&#x3001;brew&#x3001;&#x7B49;&#x7B49;&#x90FD;&#x662F;&#x4F7F;&#x7528;&#x7684; http&#x534F;&#x8BAE;</li>
+</ul>
+<h2 id="&#x4E8C;&#x3001;&#x5B9E;&#x73B0;&#x4EE3;&#x7406;&#x65B9;&#x6CD5;"><a name="&#x4E8C;&#x3001;&#x5B9E;&#x73B0;&#x4EE3;&#x7406;&#x65B9;&#x6CD5;" class="plugin-anchor" href="#&#x4E8C;&#x3001;&#x5B9E;&#x73B0;&#x4EE3;&#x7406;&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E8C;&#x3001;&#x5B9E;&#x73B0;&#x4EE3;&#x7406;&#x65B9;&#x6CD5;</h2>
+<h3 id="i-&#x4F7F;&#x7528;&#x7EC8;&#x7AEF;&#x5168;&#x5C40;&#x4EE3;&#x7406;&#x8F6F;&#x4EF6;"><a name="i-&#x4F7F;&#x7528;&#x7EC8;&#x7AEF;&#x5168;&#x5C40;&#x4EE3;&#x7406;&#x8F6F;&#x4EF6;" class="plugin-anchor" href="#i-&#x4F7F;&#x7528;&#x7EC8;&#x7AEF;&#x5168;&#x5C40;&#x4EE3;&#x7406;&#x8F6F;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>I. &#x4F7F;&#x7528;&#x7EC8;&#x7AEF;&#x5168;&#x5C40;&#x4EE3;&#x7406;&#x8F6F;&#x4EF6;</h3>
+<p><kbd><strong>v2ray</strong></kbd> + <kbd><strong>polipo</strong></kbd> + <kbd><strong>http_proxy</strong></kbd> + <kbd><strong>curl ip.gs</strong></kbd></p>
+<ol>
+<li><p>v2ray &#x5BA2;&#x6237;&#x7AEF;&#x548C;&#x670D;&#x52A1;&#x7AEF;&#x5B89;&#x88C5;&#x914D;&#x7F6E;&#x5F88;&#x7B80;&#x5355; - <a href="https://www.v2ray.com/chapter_00/install.html" target="_blank">v2ray &#x5B98;&#x65B9;&#x5B89;&#x88C5;&#x6559;&#x7A0B;</a></p>
+</li>
+<li><p>v2ray &#x5BA2;&#x6237;&#x7AEF;&#x548C;&#x670D;&#x52A1;&#x7AEF;&#x4E00;&#x5B9A;&#x8981;&#x5728; <code>/etc/v2ray/config.json</code> &#x6587;&#x4EF6;&#x6DFB;&#x52A0;&#x65E5;&#x5FD7;&#x8DEF;&#x5F84;&#xFF01;&#xFF01;&#xFF01;</p>
+</li>
+</ol>
+<pre><code class="lang-shell">&quot;log&quot;: {
+    &quot;loglevel&quot;: &quot;warning&quot;,
+    &quot;access&quot;: &quot;/var/log/v2ray/access.log&quot;,
+    &quot;error&quot;: &quot;/var/log/v2ray/error.log&quot;
+  }
+</code></pre>
+<ol>
+<li>&#x5B89;&#x88C5; polipo</li>
+</ol>
+<pre><code class="lang-shell">## Ubuntu &#x4E0B;&#x7684;&#x5B89;&#x88C5;
+sudo apt-get install polipo
+
+## CentOS &#x4E0B;&#x7684;&#x5B89;&#x88C5;
+sudo yum install polipo
+
+## &#x7F16;&#x8F91;&#x914D;&#x7F6E;&#x6587;&#x4EF6; /etc/polipo/config
+vim /etc/polipo/config
+# This file only needs to list configuration variables that deviate
+# from the default values.  See /usr/share/doc/polipo/examples/config.sample
+# and &quot;polipo -v&quot; for variables you can tweak and further information.
+
+logSyslog = true
+logFile = /var/log/polipo/polipo.log
+
+proxyAddress = &quot;0.0.0.0&quot;
+
+socksParentProxy = &quot;127.0.0.1:1080&quot;
+socksProxyType = socks5
+
+chunkHighMark = 50331648
+objectHighMark = 16384
+
+serverMaxSlots = 64
+serverSlots = 16
+serverSlots1 = 32
+
+# This file only needs to list configuration variables that deviate
+# from the default values.  See /usr/share/doc/polipo/examples/config.sample
+# and &quot;polipo -v&quot; for variables you can tweak and further information.
+
+logSyslog = true
+logFile = /var/log/polipo/polipo.log
+
+# socks &#x4EE3;&#x7406;&#x5730;&#x5740;
+socksParentProxy = &quot;127.0.0.1:1080&quot;
+# &#x7C7B;&#x578B;
+socksProxyType = socks5
+# &#x8F6C;&#x6362;&#x4E3A; HTTP &#x4E4B;&#x540E;&#x7684;&#x7AEF;&#x53E3;
+proxyPort = 8123
+# &#x4E0B;&#x9762;&#x4E0D;&#x6E05;&#x695A;&#xFF0C;&#x4F46;&#x9700;&#x8981;
+chunkHighMark = 50331648
+objectHighMark = 16384
+serverMaxSlots = 64
+serverSlots = 16
+serverSlots1 = 32
+</code></pre>
+<ol>
+<li>&#x786E;&#x4FDD;&#x670D;&#x52A1;&#x5668; v2ray&#x3001;&#x5BA2;&#x6237;&#x7AEF; v2ray &#x548C; polipo &#x670D;&#x52A1;&#x90FD;&#x6B63;&#x5E38;&#x8FD0;&#x884C;&#xFF0C;&#x4E14;&#x67E5;&#x770B;&#x65E5;&#x5FD7;&#x6CA1;&#x6709;&#x62A5;&#x9519;&#xFF01;</li>
+<li>&#x5728;&#x5BA2;&#x6237;&#x7AEF;&#x672C;&#x5730; <code>~/.bashrc</code> &#x6587;&#x4EF6;&#x4E2D;&#x8BBE;&#x7F6E; <code>export http_proxy=http://127.0.0.1:8123
+export https_proxy=http://127.0.0.1:8123</code> &#x522B;&#x540D;</li>
+</ol>
+<pre><code class="lang-shell"># &#x6DFB;&#x52A0;&#x5982;&#x4E0B;
+alias hp=&quot;export http_proxy=http://127.0.0.1:8123&quot;
+alias hps=&quot;export https_proxy=http://127.0.0.1:8123&quot;
+</code></pre>
+<ol>
+<li><p>&#x4F7F;&#x7528; <code>curl ip.gs</code> &#x67E5;&#x770B;&#x662F;&#x5426;&#x6210;&#x529F;&#x5B9E;&#x73B0;&#x4EE3;&#x7406;&#xFF0C;&#x82E5;&#x4E0D;&#x6210;&#x529F;&#xFF0C;&#x68C0;&#x67E5;&#x5982;&#x4E0B;</p>
+</li>
+<li><p>&#x672C;&#x5730;&#x548C;&#x670D;&#x52A1;&#x5668;&#x9632;&#x706B;&#x5899;&#x662F;&#x5426;&#x5F00;&#x542F;&#xFF0C;&#x90FD;&#x6CA1;&#x5F00;&#x542F;&#x5219;&#x8DF3;&#x8FC7;&#x8FD9;&#x9879;&#xFF1B;&#x672C;&#x5730;&#x9632;&#x706B;&#x5899;&#x5F00;&#x542F;&#x7684;&#x8BDD;&#xFF0C;&#x68C0;&#x67E5; 8123 &#x548C; 1080 &#x7AEF;&#x53E3;&#x662F;&#x5426;&#x5F00;&#x542F; tcp&#xFF1B;&#x670D;&#x52A1;&#x5668;&#x9632;&#x706B;&#x5899;&#x5F00;&#x542F;&#x7684;&#x8BDD;&#xFF0C;&#x68C0;&#x67E5; v2ray &#x914D;&#x7F6E;&#x7684;&#x7AEF;&#x53E3;&#x662F;&#x5426;&#x5F00;&#x542F; tcp&#xFF0C;&#x4EE5;&#x4E0A;&#x7AEF;&#x53E3;&#x6CA1;&#x5F00;&#x542F;&#x7684;&#x8BDD;&#xFF0C;&#x90FD;&#x8981;&#x5F00;&#x542F;</p>
+</li>
+<li>&#x767B;&#x5F55; VPS &#x63A7;&#x5236;&#x53F0;&#xFF0C;&#x68C0;&#x67E5;&#x5B89;&#x5168;&#x7EC4;&#xFF08;&#x79F0;&#x547C;&#x4E0D;&#x4E00;&#xFF0C;&#x963F;&#x91CC;&#x4E91;&#x53EB;&#x9632;&#x706B;&#x5899;&#xFF09;&#x91CC;&#x7684; v2ray &#x7AEF;&#x53E3;&#x662F;&#x5426;&#x5F00;&#x542F; tcp</li>
+<li>&#x53EF;&#x4EE5;&#x5728;&#x672C;&#x5730;&#x4F7F;&#x7528; <code>paping -p port hostip</code> &#x68C0;&#x67E5;&#x670D;&#x52A1;&#x5668;&#x548C;&#x672C;&#x5730;&#x7AEF;&#x53E3;&#x5F00;&#x542F;&#x60C5;&#x51B5;</li>
+<li>&#x4E00;&#x822C;&#x4FEE;&#x6539;&#x5B89;&#x5168;&#x7EC4;&#xFF0C;&#x9700;&#x8981;&#x91CD;&#x542F;&#x670D;&#x52A1;&#x5668;&#x624D;&#x6709;&#x6548;</li>
+<li><p>&#x8BBE;&#x7F6E;&#x4E86;&#x5B89;&#x5168;&#x7EC4;&#x5C31;&#x53EF;&#x4EE5;&#x4E0D;&#x8BBE;&#x7F6E;&#x4E91;&#x670D;&#x52A1;&#x5668;&#x9632;&#x706B;&#x5899;&#xFF0C;&#x56E0;&#x4E3A;&#x5B89;&#x5168;&#x7EC4;&#x89C4;&#x5219;&#x76F8;&#x5BF9;&#x4E8E;&#x4E91;&#x670D;&#x52A1;&#x5668;&#x9632;&#x706B;&#x5899;&#x662F;&#x5728;&#x66F4;&#x4E0A;&#x4E00;&#x5C42;&#x7684;&#x62E6;&#x622A;&#xFF01;&#x6BD4;&#x5982;&#xFF0C;&#x5B89;&#x5168;&#x7EC4;&#x5F00;&#x542F;&#x4E86; 10001 &#x7AEF;&#x53E3;&#x7684; tcp&#xFF0C;&#x5982;&#x679C;&#x5F00;&#x542F;&#x9632;&#x706B;&#x5899;&#x7684;&#x670D;&#x52A1;&#x5668;&#x6CA1;&#x6709;&#x5F00;&#x542F; 10001 &#x7AEF;&#x53E3;&#x7684; tcp &#xFF0C;&#x5916;&#x9762;&#x4E5F;&#x662F;&#x65E0;&#x6CD5;&#x8FDE;&#x63A5;&#x7684;&#x3002;</p>
+</li>
+<li><p>&#x91CD;&#x542F;&#x670D;&#x52A1;&#xFF0C;&#x518D;&#x6B21;&#x4F7F;&#x7528; <code>curl ip.gs</code> &#x68C0;&#x67E5;&#x662F;&#x5426;&#x4EE3;&#x7406;&#x6210;&#x529F;&#xFF0C;&#x4E0D;&#x6210;&#x529F;&#xFF0C;&#x5C31; Google&#xFF01;</p>
+</li>
+</ol>
+<h3 id="ii-&#x4FEE;&#x6539;&#x9700;&#x8981;&#x4EE3;&#x7406;&#x7684;&#x547D;&#x4EE4;&#x914D;&#x7F6E;&#x6587;&#x4EF6;"><a name="ii-&#x4FEE;&#x6539;&#x9700;&#x8981;&#x4EE3;&#x7406;&#x7684;&#x547D;&#x4EE4;&#x914D;&#x7F6E;&#x6587;&#x4EF6;" class="plugin-anchor" href="#ii-&#x4FEE;&#x6539;&#x9700;&#x8981;&#x4EE3;&#x7406;&#x7684;&#x547D;&#x4EE4;&#x914D;&#x7F6E;&#x6587;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>II. &#x4FEE;&#x6539;&#x9700;&#x8981;&#x4EE3;&#x7406;&#x7684;&#x547D;&#x4EE4;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</h3>
+<ul>
+<li>&#x592A;&#x9EBB;&#x70E6;</li>
+</ul>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> <a href="https://github.com/Xiechengqi" target="_blank">Xiechengqi</a> </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> <strong>&#x6700;&#x65B0;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;</strong> 2019-12-06 21:06:22 </span> </footer>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="正则表达式学习.html" class="navigation navigation-prev " aria-label="Previous page: 正则表达式学习">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../Shell/" class="navigation navigation-next " aria-label="Next page: Shell">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"终端代理","level":"1.1.24","depth":2,"next":{"title":"Shell","level":"1.2","depth":1,"path":"Shell/README.md","ref":"Shell/README.md","articles":[{"title":"shell小知识","level":"1.2.1","depth":2,"path":"Shell/shell小知识.md","ref":"Shell/shell小知识.md","articles":[]},{"title":"Linux文本操作三大利器-grep、sed、awk","level":"1.2.2","depth":2,"path":"Shell/Linux文本操作三大利器-grep、sed、awk.md","ref":"Shell/Linux文本操作三大利器-grep、sed、awk.md","articles":[]},{"title":"Shell文本处理常用工具补遗","level":"1.2.3","depth":2,"path":"Shell/Shell文本处理常用工具补遗.md","ref":"Shell/Shell文本处理常用工具补遗.md","articles":[]},{"title":"句子解析","level":"1.2.4","depth":2,"path":"Shell/句子解析.md","ref":"Shell/句子解析.md","articles":[]},{"title":"识别是否是root用户","level":"1.2.5","depth":2,"path":"Shell/识别是否是root用户.md","ref":"Shell/识别是否是root用户.md","articles":[]},{"title":"识别系统","level":"1.2.6","depth":2,"path":"Shell/识别系统.md","ref":"Shell/识别系统.md","articles":[]}]},"previous":{"title":"正则表达式学习","level":"1.1.23","depth":2,"path":"Linux/正则表达式学习.md","ref":"Linux/正则表达式学习.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-highlight","-livereload","-sharing","expandable-chapters","popup","pageview-count","code","back-to-top-button","hide-element","github-buttons","github","splitter","search-pro","anchors","page-footer-ex","advanced-emoji","sharing-plus"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/Xiechengqi/test"},"page-footer-ex":{"copyright":"[Xiechengqi](https://github.com/Xiechengqi)","markdown":true,"update_label":"<strong>最新修订时间：</strong>","update_format":"YYYY-MM-DD HH:mm:ss"},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"popup":{},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"back-to-top-button":{},"pageview-count":{},"github-buttons":{"buttons":[{"user":"Xiechengqi","repo":"test","type":"star","size":"small","count":true}]},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":false,"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*","description":"日常学习笔记"},"file":{"path":"Linux/终端代理.md","mtime":"2019-12-06T13:06:22.361Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-07T02:13:25.175Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
